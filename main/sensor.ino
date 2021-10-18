@@ -1,7 +1,9 @@
-void buildPacket(uint8_t txBuffer[7])
+void buildPacket(uint8_t txBuffer[1])
 {
-  char buffer[1];
-  uint8_t r = rand() % 256;
+  long randNumber;
+  randNumber = random(256);
+  uint8_t r = randNumber;
   txBuffer[0] = r;
-
+  Serial.print(F("Random Number: "));
+  Serial.println(randNumber);
 }
